@@ -21,7 +21,7 @@ struct PackageDetail : View {
                     // Image(package.owner.avatar_url)
                     // Divider()
                     Text(package.owner.login)
-                        .color(.gray)
+                        .foregroundColor(.gray)
                         .font(.subheadline)
                 }
             Button(action: {

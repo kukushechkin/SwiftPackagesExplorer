@@ -10,7 +10,7 @@ import SwiftUI
 import Combine
 
 struct PackageList : View {
-    @ObjectBinding
+    @ObservedObject
     var packageManager = PackageManager()
 
     var body: some View {
@@ -22,7 +22,7 @@ struct PackageList : View {
                 // TODO: search field, check corresponding session
                 // $0.name.contains("swift")
             }) { package in
-                NavigationButton(destination: PackageDetail(package: package)) {
+                NavigationLink(destination: PackageDetail(package: package)) {
                     PackageRow(package: package)
                 }
                 .navigationBarTitle(Text("Packages (\(self.packageManager.packages.count))"), displayMode: .large)

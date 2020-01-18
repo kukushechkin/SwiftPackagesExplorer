@@ -19,7 +19,7 @@ let testPackage = Package(id: 0, name: "Some Package", author: "Some Author")
 //    Package(id: 3, name: "Another Package", author: "Another Author"),
 //    Package(id: 4, name: "Yet another Package", author: "Same Author")]
 
-final class PackageManager: BindableObject {    
+final class PackageManager: ObservableObject {    
     let didChange = PassthroughSubject<PackageManager, Never>()
     var packages: [Package] = []
 
